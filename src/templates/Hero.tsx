@@ -40,7 +40,7 @@ const Hero = () => (
         // }
       />
       <Image
-        src="/assets/images/qrcode_soso.png"
+        src={`${AppConfig.basePath}/assets/images/qrcode_soso.png`}
         alt="小而美工具小程序码"
         width={2172}
         height={800}
