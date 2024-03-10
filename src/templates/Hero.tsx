@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -12,12 +13,12 @@ const Hero = () => (
   <Background color="bg-gray-100">
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
-        {/* <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
+        <li>
+          <Link href="https://github.com/whinc/ucalc-website" target={'_blank'}>
             GitHub
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/">Sign in</Link>
         </li> */}
       </NavbarTwoColumns>
