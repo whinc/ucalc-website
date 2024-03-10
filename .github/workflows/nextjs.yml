@@ -53,6 +53,9 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Setup npm mirror
+        run: |
+          npm config set registry https://registry.npmmirror.com
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
