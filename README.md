@@ -5,11 +5,20 @@
 </p>
 
 
-## 本地开发
+### 本地开发
 
 ```bash
 npm ci
 npm run dev
+```
+
+### Gitee
+
+为了方便国内用户访问，仓库也同步一份到 Gitee 上 [xiaohui_hubei/ucalc-website](https://gitee.com/xiaohui_hubei/ucalc-website)
+
+```bash
+git remote add origin-gitee git@gitee.com:xiaohui_hubei/ucalc-website.git
+git push origin-gitee main
 ```
 
 ### 压缩图片
