@@ -18,9 +18,14 @@ const Hero = () => (
             GitHub
           </Link>
         </li>
-        {/* <li>
-          <Link href="/">Sign in</Link>
-        </li> */}
+        <li>
+          <Link
+            href="https://github.com/whinc/ucalc-website/issues/new"
+            target={'_blank'}
+          >
+            意见反馈
+          </Link>
+        </li>
       </NavbarTwoColumns>
     </Section>
 
