@@ -4,6 +4,7 @@
   <a href="https://whinc.github.io/ucalc-website/" target="_blank"><img src="./public/assets/images/qrcode_soso.png" alt="Next js starter banner"></a>
 </p>
 
+微信号：`iCloudCoding`
 
 ### 本地开发
 
