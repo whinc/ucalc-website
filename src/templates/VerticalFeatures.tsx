@@ -13,14 +13,14 @@ const VerticalFeatures = () => (
     />
     <VerticalFeatureRow
       title={pages.relationship.title}
-      description="按键输入或文字输入亲戚关系，自动计算亲戚的称呼，也可以反差对方对我的称呼，堪称走亲访友神器！"
+      description="按键输入或文字输入亲戚关系，自动计算亲戚的称呼，也可以反查对方对我的称呼，堪称走亲访友神器！"
       image="/assets/screenshots/relationship.png"
       qrcode="/assets/qrcodes/relationship.png"
       reverse
     />
     <VerticalFeatureRow
       title={pages.bmi_adult.title}
-      description="输入身高和体重后，自动计算 BMI 指数，估算肥胖程度和疾病风险，科学评估健康，迈向更健康的生活！"
+      description="输入身高和体重后，自动计算 BMI 指数，估算肥胖程度和疾病风险，迈向健康生活！"
       image="/assets/screenshots/bmi_adult.png"
       qrcode="/assets/qrcodes/bmi_adult.png"
     />
