@@ -40,8 +40,9 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       </div>
 
       <div className="w-full p-6 sm:w-1/2">
+        {/* FIXME: github actions 部署后，screenshots 图片后缀变成了大写，导致图片加载不出来，暂时手动转换下 */}
         <img
-          src={`${router.basePath}${props.image}`}
+          src={`${router.basePath}${props.image.replace(/png$/, 'PNG')}`}
           alt={props.imageAlt ?? `${props.title}截图`}
           loading="lazy"
         />
