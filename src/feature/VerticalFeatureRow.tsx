@@ -31,9 +31,10 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <div className="mt-6 text-xl leading-9">{props.description}</div>
         {props.qrcode && (
           <img
-            className="mt-6 text-xl leading-9"
+            className="m-auto mt-6 text-xl leading-9"
             src={`${router.basePath}${props.qrcode}`}
             alt={props.qrcodeAlt ?? `${props.title}小程序码`}
+            loading="lazy"
           />
         )}
       </div>
@@ -42,6 +43,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <img
           src={`${router.basePath}${props.image}`}
           alt={props.imageAlt ?? `${props.title}截图`}
+          loading="lazy"
         />
       </div>
     </div>
