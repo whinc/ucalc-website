@@ -23,5 +23,8 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.ignorePath": ".gitignore" // Don't run prettier for files listed in .gitignore
+  "prettier.ignorePath": ".gitignore",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  } // Don't run prettier for files listed in .gitignore
 }

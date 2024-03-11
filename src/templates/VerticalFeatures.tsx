@@ -8,7 +8,7 @@ const VerticalFeatures = () => (
     <VerticalFeatureRow
       title={pages.calendar.title}
       description="支持公历视图、农历视图、公历和农历互转、公历节日、农历节日、法定假日调休、宜忌事项、生肖、星座等。农历遵循现行的国家标准《农历的编算和颁行(GB/T 33661-2017)》权威可靠。"
-      image={`/assets/screenshots/calendar.PNG`}
+      image={`/assets/screenshots/calendar.png`}
       qrcode="/assets/qrcodes/calendar.png"
     />
     <VerticalFeatureRow
