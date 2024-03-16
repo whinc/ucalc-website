@@ -10,7 +10,7 @@ import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
-const Hero = (props) => {
+const Hero = () => {
   const [hostname, setHostName] = useState('');
   useEffect(() => {
     setHostName(window.location.hostname);
@@ -84,13 +84,5 @@ const Hero = (props) => {
     </Background>
   );
 };
-
-export async function getStaticProps(context) {
-  return {
-    props: {
-      getWindow: () => window,
-    },
-  };
-}
 
 export { Hero };
