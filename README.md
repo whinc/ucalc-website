@@ -17,8 +17,8 @@ npm run dev
 
 ### 部署发布
 
-Github：推送代码，触发流水线发布 Github Pages
-Gitee：由于 Gitee 暂不支持 node.js ^18.17.0 的构建环境，采用手动发布，本地运行`npm run build-prod`后推送到仓库，手动触发 Gitee Pages 部署
+- Github：推送代码，触发流水线发布 Github Pages
+- Gitee：由于 Gitee 暂不支持 node.js ^18.17.0 的构建环境，采用手动发布，本地运行`npm run build-prod`后推送到仓库，手动触发 Gitee Pages 部署
 
 ### Gitee
 
