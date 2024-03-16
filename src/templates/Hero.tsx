@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -9,7 +9,6 @@ import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
-import { hostname } from 'os';
 
 const Hero = (props) => {
   const [hostname, setHostName] = useState('');
