@@ -22,7 +22,11 @@ async function compressImage(input) {
     await tinify
       .fromFile(input)
       // 手机截图
-      // .resize({ method: 'fit', width: Math.round(1242/3), height: Math.round(2688/3) })
+      .resize({
+        method: 'fit',
+        width: Math.round(1242 / 3),
+        height: Math.round(2688 / 3),
+      })
       // 二维码
       // .resize({
       //   method: 'fit',
@@ -30,11 +34,11 @@ async function compressImage(input) {
       //   height: Math.round(430 / 3),
       // })
       // 搜一搜
-      .resize({
-        method: 'fit',
-        width: Math.round(1086 / 2),
-        height: Math.round(400 / 2),
-      })
+      // .resize({
+      //   method: 'fit',
+      //   width: Math.round(1086 / 2),
+      //   height: Math.round(400 / 2),
+      // })
       .toFile(input);
     const outputStat = await fs.stat(input);
     console.log(`after compress size: ${outputStat.size}`);

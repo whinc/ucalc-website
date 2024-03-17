@@ -32,5 +32,5 @@ git push origin-gitee main
 ### 压缩图片
 
 ```
-TINYPNG_API_KEY=<API_KEY> node ./scripts/tinypng.mjs <input>  <output>
+TINYPNG_API_KEY=<API_KEY> node ./scripts/tinypng.mjs <input> [input...]
 ```
