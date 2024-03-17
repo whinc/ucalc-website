@@ -8,11 +8,6 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
-const inputs = process.argv.slice(2);
-for (const input of inputs) {
-  await compressImage(input);
-}
-
 async function compressImage(input) {
   const inputStat = await fs.stat(input);
   console.log(`--> ${input}`);
@@ -50,3 +45,10 @@ async function compressImage(input) {
     console.log(error);
   }
 }
+
+const inputs = process.argv.slice(2);
+
+inputs.reduce(
+  (prev, cur) => prev.then(() => compressImage(cur)),
+  Promise.resolve(),
+);
