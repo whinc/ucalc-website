@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
-    "deploy:github": "npm run lint && git add . && git commit -m 'build' && git push && echo 'See https://github.com/whinc/ucalc-website/actions'",
+    "deploy:github": "npm run lint &&  git push && echo 'See https://github.com/whinc/ucalc-website/actions'",
     "deploy:gitee": "npm run lint && npm run build-prod && git add . && git commit -m 'build for gitee' && git push origin-gitee main && echo 'See https://gitee.com/xiaohui_hubei/ucalc-website/pages'",
     "build-prod": "run-s clean build",
     "clean": "rimraf .next .swc out",
