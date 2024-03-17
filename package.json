@@ -6,6 +6,8 @@
     "build": "next build",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
+    "deploy:github": "echo 'Just push to remote repo  will trigger CI publish!'",
+    "deploy:gitee": "npm run build-prod && git commit -a -m '构建站点' && git push origin-gitee main",
     "build-prod": "run-s clean build",
     "clean": "rimraf .next .swc out",
     "lint": "next lint",
