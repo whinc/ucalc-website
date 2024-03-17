@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import Script from 'next/script';
 import { NextSeo } from 'next-seo';
 
 import { AppConfig } from '../utils/AppConfig';
@@ -47,6 +48,8 @@ const Meta = (props: IMetaProps) => {
           key="favicon"
         />
       </Head>
+      <Script src="https://hm.baidu.com/hm.js?317c777c61690bdf21de7e7ea4cb6837" />
+      <Script src="https://hm.baidu.com/hm.js?6b7d00abe3480727ae8dde55075470d5" />
       <NextSeo
         title={props.title}
         description={props.description}
