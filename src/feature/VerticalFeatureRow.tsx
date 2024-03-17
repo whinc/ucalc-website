@@ -33,7 +33,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           <img
             className="m-auto mt-6 text-xl leading-9"
             src={`${router.basePath}${props.qrcode}`}
-            alt={props.qrcodeAlt ?? `${props.title}小程序码`}
+            alt={props.qrcodeAlt ?? `${props.title}小程序`}
             loading="lazy"
           />
         )}
@@ -43,7 +43,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         {/* FIXME: github actions 部署后，screenshots 图片后缀变成了大写，导致图片加载不出来，暂时手动转换下 */}
         <img
           src={`${router.basePath}${props.image.replace(/png$/, 'PNG')}`}
-          alt={props.imageAlt ?? `${props.title}截图`}
+          alt={props.imageAlt ?? `${props.title}`}
           loading="lazy"
         />
       </div>
