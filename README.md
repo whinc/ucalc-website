@@ -12,6 +12,7 @@
 
 ```bash
 npm ci
+# 启动后本地浏览器打开 http://localhost:3000/ucalc-website/
 npm run dev
 ```
 
@@ -34,8 +35,17 @@ git remote add origin-gitee git@gitee.com:xiaohui_hubei/ucalc-website.git
 git push origin-gitee main
 ```
 
-### 压缩图片
+### 工具脚本
 
-```
-TINYPNG_API_KEY=<API_KEY> node ./scripts/tinypng.mjs <input> [input...]
+```bash
+# 将文件后缀都改成小写形式
+# sh ./scripts/lowersuffix.sh ./public/assets/screenshots
+sh ./scripts/lowersuffix.sh <dir>
+
+# 批量压缩目录中的图片
+# TINYPNG_API_KEY=<API_KEY> sh ./scripts/compress.sh ./public/assets/screenshots
+TINYPNG_API_KEY=<API_KEY> sh ./scripts/compress.sh <dir>
+
+# 压缩单张图片
+TINYPNG_API_KEY=<API_KEY> node ./scripts/tinypng.mjs <input> [output=input]
 ```

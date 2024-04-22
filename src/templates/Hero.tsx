@@ -61,7 +61,7 @@ const Hero = () => {
           title={
             <>
               {'一款有温度的小程序\n'}
-              <span className="text-primary-500">小而美工具</span>
+              <span className="text-primary-500">「小而美工具」</span>
             </>
           }
           description={AppConfig.description}

@@ -26,5 +26,8 @@ for file in "$directory"/*; do
   new_file="${file%.*}.$lowercase_extension"
 
   # 重命名文件
+  echo "rename $file -> $new_file"
   mv "$file" "$new_file"
 done
+
+echo 'done!'
