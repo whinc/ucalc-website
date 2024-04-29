@@ -28,8 +28,14 @@ npm run deploy:gitee
 
 ### 更新图片资源
 
-1. 将新增的图片（原始大小）拷贝到 `public/assets/screenshots_raw`
-2. 执行脚本`sh ./scripts/update-assets.sh`
+```bash
+# 1.将新增的图片（原始大小）拷贝到 public/assets/screenshots_raw 目录
+# 2.执行下面脚本，全量压缩图片
+TINYPNG_API_KEY=<API_KEY> npm run update-assets
+
+# 增量压缩图片，仅 --since 日期之后新增的图片会被压缩
+TINYPNG_API_KEY=<API_KEY> npm run update-assets -- --since='2024-04-29T10:00:00'
+```
 
 > 脚本依赖 zx 工具，请先确保全局安装`npm install -g zx`
 

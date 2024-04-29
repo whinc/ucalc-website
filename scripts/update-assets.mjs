@@ -1,9 +1,17 @@
 #!/usr/bin/env zx
 
-import 'zx/globals'
+import 'zx/globals';
 import tinify from 'tinify';
+import { exit } from 'process';
+
+if (!process.env.TINYPNG_API_KEY) {
+  echo(chalk.red('请指定环境变量 TINYPNG_API_KEY'));
+  echo(`申请 API key 请前往 https://tinypng.com/developers`);
+  exit(1);
+}
 
 tinify.key = process.env.TINYPNG_API_KEY;
+
 const rootDir = path.join(__dirname, '../public');
 const rawDir = path.join(rootDir, 'assets', 'screenshots_raw');
 const screenshotsDir = path.join(rootDir, 'assets', 'screenshots');
@@ -14,22 +22,34 @@ if (!fs.statSync(rawDir).isDirectory()) {
   process.exit(1);
 }
 
-if (fs.existsSync(screenshotsDir)) {
-  echo(`remove ${screenshotsDir}`);
-  fs.rmSync(screenshotsDir, { recursive: true });
+/** @type {string[]} */
+let fileNames = [];
+// 增量压缩
+if (argv.since) {
+  echo('增量压缩')
+  const since = new Date(argv.since);
+  const fileEntries = await glob('*[_dark|_light|_qrcode].[pP][nN][gG]', {
+    cwd: rawDir,
+    objectMode: true,
+    stats: true,
+  });
+  fileNames = fileEntries
+    .filter((entry) => entry.stats.birthtimeMs >= since.getTime())
+    .map((entry) => entry.name);
+} else {
+  echo('全量压缩')
+  fileNames = await glob('*[_dark|_light|_qrcode].[pP][nN][gG]', {
+    cwd: rawDir,
+  });
 }
 
-echo(`regenerate ${screenshotsDir}`);
-const screenshotsFileNames = await glob('*[_dark|_light|_qrcode].[pP][nN][gG]', {
-  cwd: rawDir,
-});
-const totalCount = screenshotsFileNames.length
-echo(`found ${totalCount} files`)
+const totalCount = fileNames.length;
+echo(`found ${totalCount} files`);
 fs.mkdirSync(screenshotsDir, { recursive: true });
 
-let finishedCount = 0
+let finishedCount = 0;
 await Promise.all(
-  screenshotsFileNames.map(async (filename) => {
+  fileNames.map(async (filename) => {
     const inputPath = path.join(rawDir, filename);
     const outputPath = path.join(
       screenshotsDir,
@@ -51,4 +71,4 @@ await Promise.all(
   }),
 );
 
-echo('done!')
+echo('done!');
