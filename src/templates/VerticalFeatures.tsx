@@ -15,39 +15,44 @@ const VerticalFeatures = () => (
       pageId="calendar_lunar"
       description="日期查询、吉凶查询、神位查询"
       reverse
-      // qrcode="/assets/qrcodes/calendar.png"
     />
     <VerticalFeatureRow
       pageId="calendar_query"
-      description="24节气、农历节日、公历节日、西方节日、偏门节日"
+      description="农历节日、24节气、公历节日、西方节日、法定节日"
     />
     <VerticalFeatureRow
-      pageId="relationship"
-      description="按键输入或文字输入亲戚关系，自动计算亲戚的称呼，也可以反查对方对我的称呼，堪称走亲访友神器！"
+      pageId="bmi_child"
+      description="输入儿童（0~7岁）身高体重后，自动计算身高、体重、BMI指数，并提供 0~7 岁儿童的年龄别身高、年龄别体重、年龄别头围、身高别体重和年龄别 BMI 多个数据表格，及时掌握宝宝的发育情况！数据源自卫健委卫生行业标准《7岁以下儿童生长标准(WS/T423—2022)》权威可靠。"
       reverse
+    />
+    <VerticalFeatureRow
+      pageId="bmi_teenager"
+      description="输入儿童青少年（7~18岁）身高后，自动计算身高发育等级，支持遗传身高计算，并提供 7~18 岁儿童青少年的年龄别身高数据表格，及时掌握孩子的发育情况！数据源自卫健委卫生行业标准《7 岁～18 岁儿童青少年身高发育等级评价(WS/T
+            612—2018)》权威可靠。"
     />
     <VerticalFeatureRow
       pageId="bmi_adult"
       description="输入身高和体重后，自动计算 BMI 指数，估算肥胖程度和疾病风险，迈向健康生活！"
+      reverse
     />
     <VerticalFeatureRow
-      pageId="bmi_child"
-      description="输入儿童身高体重后，自动计算其百分位或标准差分布情况，并提供 0~7 岁儿童的年龄别身高、年龄别体重、年龄别头围、身高别体重和年龄别 BMI 多个表格数据查询，及时掌握宝宝的发育情况！数据源自卫健委卫生行业标准《7岁以下儿童生长标准(WS/T423—2022)》权威可靠。"
-      reverse
+      pageId="relationship"
+      description="按键输入或文字输入亲戚关系，自动计算亲戚的称呼，也可以反查对方对我的称呼，堪称走亲访友神器！"
     />
     <VerticalFeatureRow
       pageId="basic"
       description="支持加、减、乘、除、余运算，以及括号运算，自动记录计算历史，计算历史长按可以进行大写转换、回填、删除等操作"
+      reverse
     />
     <VerticalFeatureRow
       pageId="torch"
       description="一键开关手电筒，精确显示剩余电量，可调节屏幕亮度，一键开启闪烁，并可调节闪烁频率"
-      reverse
     />
     <VerticalFeatureRow
       title="丰富的主题外观"
-      description="支持浅色和深色外观，内置十多种强调色，全部免费提供，满足你的个性化需求！"
+      description="支持浅色和深色外观，支持跟随系统外观，内置十多种 iOS 强调色，满足你的个性化需求！"
       image="appearance"
+      reverse
     />
   </Section>
 );

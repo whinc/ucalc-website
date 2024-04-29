@@ -26,6 +26,13 @@ npm run deploy:github
 npm run deploy:gitee
 ```
 
+### 更新图片资源
+
+1. 将新增的图片（原始大小）拷贝到 `public/assets/screenshots_raw`
+2. 执行脚本`sh ./scripts/update-assets.sh`
+
+> 脚本依赖 zx 工具，请先确保全局安装`npm install -g zx`
+
 ### Gitee
 
 为了方便国内用户访问，仓库也同步一份到 Gitee 上 [xiaohui_hubei/ucalc-website](https://gitee.com/xiaohui_hubei/ucalc-website)
@@ -33,19 +40,4 @@ npm run deploy:gitee
 ```bash
 git remote add origin-gitee git@gitee.com:xiaohui_hubei/ucalc-website.git
 git push origin-gitee main
-```
-
-### 工具脚本
-
-```bash
-# 将文件后缀都改成小写形式
-# sh ./scripts/lowersuffix.sh ./public/assets/screenshots
-sh ./scripts/lowersuffix.sh <dir>
-
-# 批量压缩目录中的图片
-# TINYPNG_API_KEY=<API_KEY> sh ./scripts/compress.sh ./public/assets/screenshots
-TINYPNG_API_KEY=<API_KEY> sh ./scripts/compress.sh <dir>
-
-# 压缩单张图片
-TINYPNG_API_KEY=<API_KEY> node ./scripts/tinypng.mjs <input> [output=input]
 ```

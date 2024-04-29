@@ -12,6 +12,7 @@
     "clean": "rimraf .next .swc out",
     "lint": "next lint",
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
+    "update-assets": "zx ./scripts/update-assets.mjs",
     "check-types": "tsc --noEmit --pretty",
     "prepare": "husky install"
   },
@@ -54,7 +55,8 @@
     "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "zx": "^8.0.2"
   },
   "license": "ISC"
 }
