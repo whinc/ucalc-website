@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -11,10 +10,10 @@ import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
 const Hero = () => {
-  const [hostname, setHostName] = useState('');
-  useEffect(() => {
-    setHostName(window.location.hostname);
-  }, []);
+  // const [hostname, setHostName] = useState('');
+  // useEffect(() => {
+  //   setHostName(window.location.hostname);
+  // }, []);
 
   return (
     <Background color="bg-gray-100">
