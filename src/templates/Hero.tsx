@@ -20,7 +20,7 @@ const Hero = () => {
     <Background color="bg-gray-100">
       <Section yPadding="py-6">
         <NavbarTwoColumns logo={<Logo xl />}>
-          <li>
+          {/* <li>
             {hostname === 'whinc.github.io' ? (
               <Link
                 href="https://xiaohui_hubei.gitee.io/ucalc-website/"
@@ -36,7 +36,7 @@ const Hero = () => {
                 国际站点
               </Link>
             )}
-          </li>
+          </li> */}
           <li>
             <Link
               href="https://github.com/whinc/ucalc-website"
@@ -50,7 +50,7 @@ const Hero = () => {
               href="https://github.com/whinc/ucalc-website/issues/new"
               target={'_blank'}
             >
-              意见反馈
+              反馈
             </Link>
           </li>
         </NavbarTwoColumns>
