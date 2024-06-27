@@ -5,7 +5,7 @@ import { Section } from '../layout/Section';
 const VerticalFeatures = () => (
   <Section
     title="功能介绍"
-    description="️✨小而美的工具商店，应有尽用，个性换肤，永久免费️！"
+    description="️✨小而美的生活小工具商店，个性换肤，永久免费️！立即扫码，一键直达！"
   >
     <VerticalFeatureRow
       pageId="calendar"
@@ -17,8 +17,17 @@ const VerticalFeatures = () => (
       reverse
     />
     <VerticalFeatureRow
+      pageId="calendar_foto"
+      description="因果犯忌、纪念日、月斋、十斋日、六斋日、朔望斋、观音斋、杨公忌"
+    />
+    <VerticalFeatureRow
+      pageId="calendar_tao"
+      description="道教节日、三会日、三元日、八节日、五腊日、八会日、戌日、天赦日"
+      reverse
+    />
+    <VerticalFeatureRow
       pageId="calendar_query"
-      description="农历节日、24节气、公历节日、西方节日、法定节日"
+      description="24节气、农历节日、公历节日、法定节日、佛教节日、道教节日"
     />
     <VerticalFeatureRow
       pageId="bmi_child"
