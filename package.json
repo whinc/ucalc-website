@@ -12,7 +12,7 @@
     "clean": "rimraf .next .swc out",
     "lint": "next lint",
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
-    "update-assets": "zx ./scripts/update-assets.mjs",
+    "update-assets": "dotenv -e .env.local -- zx ./scripts/update-assets.mjs",
     "check-types": "tsc --noEmit --pretty",
     "prepare": "husky install"
   },

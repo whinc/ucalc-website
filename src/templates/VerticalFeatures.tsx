@@ -60,7 +60,7 @@ const VerticalFeatures = () => (
     <VerticalFeatureRow
       title="丰富的主题外观"
       description="支持浅色和深色外观，支持跟随系统外观，内置十多种 iOS 强调色，满足你的个性化需求！"
-      image="appearance"
+      image={['theme_light.png', 'theme_dark.png']}
       reverse
     />
   </Section>

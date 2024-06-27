@@ -38,6 +38,15 @@ module.exports = {
           900: '#1a202c',
         },
       },
+      animation: {
+        toggle: 'toggle 6s infinite',
+      },
+      keyframes: {
+        toggle: {
+          '0%, 20%, 80%, 100%': { opacity: 100 },
+          '30%, 60%': { opacity: 0 },
+        },
+      },
       lineHeight: {
         hero: '4.5rem',
       },

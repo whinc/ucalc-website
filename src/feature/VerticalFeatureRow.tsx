@@ -7,7 +7,11 @@ import { pages } from '@/templates/pages';
 type IVerticalFeatureRowProps = {
   pageId?: keyof typeof pages;
   title?: string;
-  image?: string;
+  /**
+   * 支持自定义图片，当 pageId 缺省时生效，图片填写相对 public/assets/screenshots 的路径即可，例如 theme_light.png
+   * 如果传入两个链接，则分别对应 light 和 dark 主题
+   */
+  image?: string | [string, string];
   description?: string;
   reverse?: boolean;
 };
@@ -50,15 +54,40 @@ const VerticalFeatureRow = ({
 
       <div className="w-full p-6 sm:w-1/2">
         {pageId && (
-          <img
-            src={`${router.basePath}/assets/screenshots/${pageId}_light.png`}
-            alt={`${pages[pageId].title}截图`}
-            loading="lazy"
-          />
+          <div className="relative">
+            <img
+              src={`${router.basePath}/assets/screenshots/${pageId}_dark.png`}
+              alt={`${pages[pageId].title}截图`}
+              loading="lazy"
+              className="absolute"
+            />
+            <img
+              src={`${router.basePath}/assets/screenshots/${pageId}_light.png`}
+              alt={`${pages[pageId].title}截图`}
+              loading="lazy"
+              className="relative animate-toggle"
+            />
+          </div>
         )}
-        {image && (
+        {image && Array.isArray(image) && (
+          <div className="relative">
+            <img
+              src={`${router.basePath}/assets/screenshots/${image[1]}`}
+              alt={`${title}截图`}
+              loading="lazy"
+              className="absolute"
+            />
+            <img
+              src={`${router.basePath}/assets/screenshots/${image[0]}`}
+              alt={`${title}截图`}
+              loading="lazy"
+              className="relative animate-toggle"
+            />
+          </div>
+        )}
+        {image && typeof image === 'string' && (
           <img
-            src={`${router.basePath}/assets/screenshots/${image}.png`}
+            src={`${router.basePath}/assets/screenshots/${image}`}
             alt={`${title}截图`}
             loading="lazy"
           />
