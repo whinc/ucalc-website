@@ -18,6 +18,8 @@ npm run dev
 
 ### 部署发布
 
+执行下面发布指令后，自动 push 触发 CI 发布流程
+
 ```bash
 # https://whinc.github.io/ucalc-website/
 npm run deploy:github
