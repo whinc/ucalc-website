@@ -28,6 +28,14 @@ npm run deploy:github
 npm run deploy:gitee
 ```
 
+### 新增工具流程
+
+1. 更新运行截图 `public/assets/screenshots_raw/xxx_{light,dark}.png`
+2. 更新二维码资源 `public/assets/screenshots_raw/xxx_qrcode.png`
+  2.1 [小程序码生成](https://mp.weixin.qq.com/wxamp/wxaqrcode/weappcode) 官方工具，页面路径格式为 `page/home/index?share=xxx`，具体参考 `project.private.config.json`
+3. 更新 pages.ts 
+4. 更新 VerticalFeatures.tsx
+
 ### 更新图片资源
 
 创建`.env.local`环境变量文件，并保存 tinypng 站点申请的秘钥
@@ -40,11 +48,12 @@ TINYPNG_API_KEY=<YOUR_API_KEY>
 # 2.执行下面脚本，全量压缩图片
 npm run update-assets
 
-# 增量压缩图片，仅 --since 日期之后新增的图片会被压缩
+# 增量压缩图片，仅 --since 日期之后新增的图片会被压缩（日期是本地时区，无需换算）
 npm run update-assets -- --since='2024-04-29T10:00:00'
 ```
 
 > 脚本依赖 zx 工具，请先确保全局安装`npm install -g zx`
+
 
 ### Gitee
 

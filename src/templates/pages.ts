@@ -149,7 +149,7 @@ export const pages = {
     shareTitle: commonShareTitle,
   } satisfies TPage,
   dnf: {
-    title: '官网信息',
+    title: 'DNF小助手',
     path: '/subpkg3/pages/dnf/index',
     icon: 'dnf',
     shareTitle: ['地下城与勇士·起源'],
@@ -172,6 +172,20 @@ export const pages = {
       '唤醒热血青春，每一次旋律，都是一段不灭的记忆！',
     ],
     enableIndependentTheme: true,
+  } satisfies TPage,
+  qrcode: {
+    title: '二维码制作',
+    path: '/subpkg2/pages/qrcode/index',
+    icon: 'qrcode',
+    shareTitle: ['轻松生成美化二维码，创意无限，快来试试吧！'],
+    enableIndependentTheme: false,
+    enableRecommend: true,
+  } satisfies TPage,
+  qrcode_beautify: {
+    title: '二维码美化',
+    path: '/subpkg2/pages/qrcode_beautify/index',
+    enableIndependentTheme: false,
+    enableRecommend: false,
   } satisfies TPage,
   blank: {
     title: '空白页',

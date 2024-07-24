@@ -39,12 +39,12 @@ module.exports = {
         },
       },
       animation: {
-        toggle: 'toggle 6s infinite',
+        toggle: 'toggle 20s infinite',
       },
       keyframes: {
         toggle: {
           '0%, 20%, 80%, 100%': { opacity: 100 },
-          '30%, 60%': { opacity: 0 },
+          '40%, 60%': { opacity: 0 },
         },
       },
       lineHeight: {
