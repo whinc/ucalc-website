@@ -6,6 +6,13 @@ export const commonShareTitle = [
 
 export type TPage = {
   title: string;
+  /**
+   * 页面所属分组，缺省时属于默认分组（默认分组不会出现在最近使用列表中）
+   * - 复杂的功能可能包含多个页面，通过分组联系到一起
+   * - 每个分组共享一个入口图标
+   * - 分组名要么为空，要么属于 keyof pages 之一
+   */
+  group?: string;
   path: string;
   shareTitle?: string[];
   // iconfont 图标名称
@@ -18,9 +25,12 @@ export type TPage = {
    * 开启后，页面可被展示到页面底部的推荐位
    */
   enableRecommend?: boolean;
+  /**
+   * 需要预加载的资源，会在首页入口点击时调用 preloadAssets 接口加载（多次调用只会加载一次）
+   */
+  preloadAssets?: Parameters<typeof preloadAssets>[0]['data'];
 };
 
-// 直接复制项目 ucalc 的 pages 常量过来
 export const pages = {
   // 这是一个虚拟页面
   $lastAccess: {
@@ -29,14 +39,16 @@ export const pages = {
   } satisfies TPage,
   home: {
     title: '首页',
+    group: 'home',
     path: '/pages/home/index',
     shareTitle: commonShareTitle,
     icon: 'home',
   } satisfies TPage,
   basic: {
-    title: '科学计算器',
+    title: '计算器',
     path: '/subpkg2/pages/basic/index',
-    icon: 'arithmetic',
+    group: 'basic',
+    icon: 'calc-arithmetic',
     enableIndependentTheme: true,
     enableRecommend: true,
     shareTitle: [
@@ -47,6 +59,7 @@ export const pages = {
   } satisfies TPage,
   relationship: {
     title: '亲戚称呼',
+    group: 'relationship',
     path: '/subpkg2/pages/relationship/index',
     icon: 'relationship',
     enableIndependentTheme: true,
@@ -59,6 +72,7 @@ export const pages = {
   } satisfies TPage,
   bmi_adult: {
     title: '成人肥胖评估(18岁以上)',
+    group: 'bmi_adult',
     path: '/subpkg2/pages/bmi_adult/index',
     icon: 'bmi',
     enableIndependentTheme: true,
@@ -71,6 +85,7 @@ export const pages = {
   } satisfies TPage,
   bmi_child: {
     title: '儿童生长评估(0~7岁)',
+    group: 'bmi_child',
     path: '/subpkg2/pages/bmi_child/index',
     icon: 'bmi-child',
     enableIndependentTheme: true,
@@ -83,6 +98,7 @@ export const pages = {
   } satisfies TPage,
   bmi_teenager: {
     title: '青少年身高评估(7~18岁)',
+    group: 'bmi_teenager',
     path: '/subpkg2/pages/bmi_teenager/index',
     icon: 'bmi-teenager',
     enableIndependentTheme: true,
@@ -91,6 +107,7 @@ export const pages = {
   } satisfies TPage,
   calendar: {
     title: '万年历',
+    group: 'calendar',
     path: '/subpkg2/pages/calendar/index',
     icon: 'calendar',
     enableIndependentTheme: true,
@@ -102,6 +119,7 @@ export const pages = {
   } satisfies TPage,
   calendar_lunar: {
     title: '老黄历',
+    group: 'calendar_lunar',
     path: '/subpkg2/pages/calendar_lunar/index',
     icon: 'calendar-lunar',
     enableIndependentTheme: true,
@@ -109,6 +127,7 @@ export const pages = {
   } satisfies TPage,
   calendar_foto: {
     title: '佛历',
+    group: 'calendar_foto',
     path: '/subpkg2/pages/calendar_foto/index',
     icon: 'calendar-foto',
     enableIndependentTheme: true,
@@ -116,6 +135,7 @@ export const pages = {
   } satisfies TPage,
   calendar_tao: {
     title: '道历',
+    group: 'calendar_tao',
     path: '/subpkg2/pages/calendar_tao/index',
     icon: 'calendar-tao',
     enableIndependentTheme: true,
@@ -123,6 +143,7 @@ export const pages = {
   } satisfies TPage,
   calendar_query: {
     title: '节日节气',
+    group: 'calendar_query',
     path: '/subpkg2/pages/calendar_query/index',
     icon: 'calendar-query',
     enableIndependentTheme: true,
@@ -131,6 +152,7 @@ export const pages = {
   } satisfies TPage,
   torch: {
     title: '手电筒',
+    group: 'torch',
     path: '/subpkg2/pages/torch/index',
     icon: 'torch-on',
     enableIndependentTheme: true,
@@ -150,6 +172,7 @@ export const pages = {
   } satisfies TPage,
   dnf: {
     title: 'DNF小助手',
+    group: 'dnf',
     path: '/subpkg3/pages/dnf/index',
     icon: 'dnf',
     shareTitle: ['地下城与勇士·起源'],
@@ -158,6 +181,7 @@ export const pages = {
   } satisfies TPage,
   dnf_tools: {
     title: '伤害计算',
+    group: 'dnf',
     path: '/subpkg3/pages/dnf_tools/index',
     shareTitle: [
       '副本攻略、职业攻略、装备攻略、宠物攻略等，带你领略DNF的精彩世界！',
@@ -166,6 +190,7 @@ export const pages = {
   } satisfies TPage,
   dnf_music: {
     title: 'DNF BGM',
+    group: 'dnf',
     path: '/subpkg3/pages/dnf_music/index',
     shareTitle: [
       '唤醒你的青春记忆，热血岁月，旋律永存，一起再战地下城！',
@@ -175,6 +200,7 @@ export const pages = {
   } satisfies TPage,
   qrcode: {
     title: '二维码制作',
+    group: 'qrcode',
     path: '/subpkg2/pages/qrcode/index',
     icon: 'qrcode',
     shareTitle: ['轻松生成美化二维码，创意无限，快来试试吧！'],
@@ -183,9 +209,19 @@ export const pages = {
   } satisfies TPage,
   qrcode_beautify: {
     title: '二维码美化',
+    group: 'qrcode',
     path: '/subpkg2/pages/qrcode_beautify/index',
     enableIndependentTheme: false,
     enableRecommend: false,
+  } satisfies TPage,
+  calc_retirement_age: {
+    title: '法定退休年龄计算器',
+    icon: 'calc-retirement-age',
+    group: 'calc_retirement_age',
+    enableIndependentTheme: true,
+    enableRecommend: true,
+    path: '/subpkg2/pages/calc_retirement_age/index',
+    shareTitle: ['延迟退休，一键测算，快速准确！'],
   } satisfies TPage,
   blank: {
     title: '空白页',

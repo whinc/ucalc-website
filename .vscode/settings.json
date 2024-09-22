@@ -26,5 +26,6 @@
   "prettier.ignorePath": ".gitignore",
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  } // Don't run prettier for files listed in .gitignore
+  },
+  "jest.enable": false // Don't run prettier for files listed in .gitignore
 }

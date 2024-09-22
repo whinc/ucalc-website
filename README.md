@@ -28,15 +28,16 @@ npm run deploy:github
 npm run deploy:gitee
 ```
 
-### 新增工具流程
+### 新增小工具介绍的流程
 
-1. 更新运行截图 `public/assets/screenshots_raw/xxx_{light,dark}.png`
-2. 更新二维码资源 `public/assets/screenshots_raw/xxx_qrcode.png`
-  2.1 [小程序码生成](https://mp.weixin.qq.com/wxamp/wxaqrcode/weappcode) 官方工具，页面路径格式为 `page/home/index?share=xxx`，具体参考 `project.private.config.json`
+1. 添加运行截图到 `public/assets/screenshots_raw/xxx_{light,dark}.png`
+2. 添加二维码到 `public/assets/screenshots_raw/xxx_qrcode.png`
+  2.1 构造页面路径 `page/home/index?share=xxx`，具体参考 `project.private.config.json`，前往[小程序码生成](https://mp.weixin.qq.com/wxamp/wxaqrcode/weappcode)页面生成码。
 3. 更新 pages.ts 
 4. 更新 VerticalFeatures.tsx
+5. 压缩并拷贝图片到目标目录  `public/assets/screenshots`，这一步参考下面的[图片压缩](#图片压缩与拷贝)
 
-### 更新图片资源
+### 图片压缩与拷贝
 
 创建`.env.local`环境变量文件，并保存 tinypng 站点申请的秘钥
 ```

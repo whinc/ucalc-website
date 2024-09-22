@@ -45,16 +45,21 @@ const VerticalFeatures = () => (
       reverse
     />
     <VerticalFeatureRow
-      pageId="qrcode"
-      description="制作生成二维码，一键美化，满足个性化需求，包括 Logo（形状、图片、磁村、位置等）、码点（形状和颜色）、码眼（形状和颜色）、背景（颜色、图片、透明度等）、容错率、尺寸、版本"
+      pageId="calc_retirement_age"
+      description="输入出生年月、性别和人员类型后，自动计算退休年龄"
     />
     <VerticalFeatureRow
       pageId="relationship"
       description="按键输入或文字输入亲戚关系，自动计算亲戚的称呼，也可以反查对方对我的称呼，堪称走亲访友神器！"
+      reverse
     />
     <VerticalFeatureRow
       pageId="basic"
       description="支持加、减、乘、除、余运算，以及括号运算，自动记录计算历史，计算历史长按可以进行大写转换、回填、删除等操作"
+    />
+    <VerticalFeatureRow
+      pageId="qrcode"
+      description="制作生成二维码，一键美化，满足个性化需求，包括 Logo（形状、图片、磁村、位置等）、码点（形状和颜色）、码眼（形状和颜色）、背景（颜色、图片、透明度等）、容错率、尺寸、版本"
       reverse
     />
     <VerticalFeatureRow
