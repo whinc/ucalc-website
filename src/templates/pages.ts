@@ -28,7 +28,7 @@ export type TPage = {
   /**
    * 需要预加载的资源，会在首页入口点击时调用 preloadAssets 接口加载（多次调用只会加载一次）
    */
-  preloadAssets?: Parameters<typeof preloadAssets>[0]['data'];
+  preloadAssets?: any;
 };
 
 export const pages = {
