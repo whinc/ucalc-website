@@ -5,7 +5,7 @@ import { Section } from '../layout/Section';
 const VerticalFeatures = () => (
   <Section
     title="功能介绍"
-    description="️✨小而美的生活小工具商店，个性换肤，永久免费️！立即扫码，一键直达！"
+    description="万年历/老黄历/公历/农历/佛历/道历/节气/节日/周公解梦/儿童(0-7岁)生长评估/青少年(7-18岁)生长评估/成人肥胖评估/亲戚称呼/科学计算器/法定退休年龄计算器/手电筒/DNF小助手，持续更新，不断优化，感谢使用！"
   >
     <VerticalFeatureRow
       pageId="calendar"
@@ -28,6 +28,11 @@ const VerticalFeatures = () => (
     <VerticalFeatureRow
       pageId="calendar_query"
       description="24节气、农历节日、公历节日、法定节日、佛教节日、道教节日"
+    />
+    <VerticalFeatureRow
+      pageId="decode_dream"
+      description="探索梦境奥秘，启迪智慧心灵之旅"
+      reverse
     />
     <VerticalFeatureRow
       pageId="bmi_child"

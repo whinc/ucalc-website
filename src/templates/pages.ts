@@ -39,10 +39,8 @@ export const pages = {
   } satisfies TPage,
   home: {
     title: '首页',
-    group: 'home',
     path: '/pages/home/index',
     shareTitle: commonShareTitle,
-    icon: 'home',
   } satisfies TPage,
   basic: {
     title: '计算器',
@@ -162,7 +160,6 @@ export const pages = {
   settings: {
     title: '设置',
     path: '/subpkg1/pages/settings/index',
-    icon: 'settings',
     shareTitle: commonShareTitle,
   } satisfies TPage,
   about: {
@@ -222,6 +219,15 @@ export const pages = {
     enableRecommend: true,
     path: '/subpkg2/pages/calc_retirement_age/index',
     shareTitle: ['延迟退休，一键测算，快速准确！'],
+  } satisfies TPage,
+  decode_dream: {
+    title: '周公解梦',
+    icon: 'decode-dream',
+    group: 'decode_dream',
+    enableIndependentTheme: true,
+    enableRecommend: true,
+    path: '/subpkg2/pages/decode_dream/index',
+    shareTitle: ['探索梦境奥秘，启迪智慧心灵之旅'],
   } satisfies TPage,
   blank: {
     title: '空白页',
