@@ -211,6 +211,15 @@ export const pages = {
     enableIndependentTheme: false,
     enableRecommend: false,
   } satisfies TPage,
+  avatar: {
+    title: '头像美化',
+    icon: 'avatar',
+    group: 'avatar',
+    enableIndependentTheme: false,
+    enableRecommend: true,
+    path: '/subpkg3/pages/avatar/index',
+    shareTitle: ['一键美化头像，快来试试吧！'],
+  } as TPage,
   calc_retirement_age: {
     title: '法定退休年龄计算器',
     icon: 'calc-retirement-age',

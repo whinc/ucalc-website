@@ -5,7 +5,7 @@ import { Section } from '../layout/Section';
 const VerticalFeatures = () => (
   <Section
     title="功能介绍"
-    description="万年历/老黄历/公历/农历/佛历/道历/节气/节日/周公解梦/儿童(0-7岁)生长评估/青少年(7-18岁)生长评估/成人肥胖评估/亲戚称呼/科学计算器/法定退休年龄计算器/手电筒/DNF小助手，持续更新，不断优化，感谢使用！"
+    description="万年历/老黄历/公历/农历/佛历/道历/节气节日/周公解梦/BMI身高体重肥胖评估/亲戚称呼/计算器/退休年龄/二维码制作/头像美化/手电筒，持续更新，不断优化，感谢使用！"
   >
     <VerticalFeatureRow
       pageId="calendar"
@@ -68,8 +68,13 @@ const VerticalFeatures = () => (
       reverse
     />
     <VerticalFeatureRow
+      pageId="avatar"
+      description="一键美化头像，自定义头像、相框、装饰，满足个性化需求"
+    />
+    <VerticalFeatureRow
       pageId="torch"
       description="一键开关手电筒，精确显示剩余电量，可调节屏幕亮度，一键开启闪烁，并可调节闪烁频率"
+      reverse
     />
     <VerticalFeatureRow
       title="丰富的主题外观"

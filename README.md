@@ -36,6 +36,7 @@ npm run deploy:gitee
 3. 更新 pages.ts 
 4. 更新 VerticalFeatures.tsx
 5. 压缩并拷贝图片到目标目录  `public/assets/screenshots`，这一步参考下面的[图片压缩](#图片压缩与拷贝)
+6. 更新首页描述文案`src/templates/VerticalFeatures.tsx`
 
 ### 图片压缩与拷贝
 
