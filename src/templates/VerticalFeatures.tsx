@@ -63,6 +63,10 @@ const VerticalFeatures = () => (
       description="支持加、减、乘、除、余运算，以及括号运算，自动记录计算历史，计算历史长按可以进行大写转换、回填、删除等操作"
     />
     <VerticalFeatureRow
+      pageId="childcare_subsidy"
+      description="根据国家育儿补贴政策，为3周岁以下婴幼儿发放补贴。选择出生年月，计算可领取的补贴金额。"
+    />
+    <VerticalFeatureRow
       pageId="qrcode"
       description="制作生成二维码，一键美化，满足个性化需求，包括 Logo（形状、图片、磁村、位置等）、码点（形状和颜色）、码眼（形状和颜色）、背景（颜色、图片、透明度等）、容错率、尺寸、版本"
       reverse
