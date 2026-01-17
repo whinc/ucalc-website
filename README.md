@@ -1,6 +1,6 @@
 # 微信小程序【小而美工具】
 
-[官网站点](https://whinc.github.io/ucalc-website/) 
+[全球访问](https://whinc.github.io/ucalc-website/) | [中国大陆访问](https://ucalc.whinc.top/)
 
 微信号：`iCloudCoding`
 
