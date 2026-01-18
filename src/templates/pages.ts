@@ -1,4 +1,4 @@
-const __DEV__ = false
+const __DEV__ = false;
 
 export const commonShareTitle = [
   "️✨小而美的工具商店，应有尽用，个性换肤，永久免费️！",
@@ -268,7 +268,7 @@ export const pages = {
     group: "mortgage",
     enableIndependentTheme: true,
     enableRecommend: true,
-    badge: '新',
+    badge: "新",
     path: "/subpkg2/pages/mortgage/main/index",
     shareTitle: ["房贷怎么还？一算就明白！"],
     hide: false, // 显示在首页入口
@@ -298,11 +298,11 @@ export const pages = {
     group: "childcare_subsidy",
     enableIndependentTheme: false,
     enableRecommend: true,
-    badge: '热',
+    badge: "热",
     path: "/subpkg2/pages/childcare_subsidy/index",
     shareTitle: [
       "国家育儿补贴，一键计算，快来看看能领多少钱！",
-      "育儿补贴新政策，计算器帮你算清楚！"
+      "育儿补贴新政策，计算器帮你算清楚！",
     ],
   } as TPage,
 

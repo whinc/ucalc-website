@@ -1,7 +1,7 @@
-import className from 'classnames';
-import { useRouter } from 'next/router';
+import className from "classnames";
+import { useRouter } from "next/router";
 
-import { pages } from '@/templates/pages';
+import { pages } from "@/templates/pages";
 
 // 优先读取 pageId，如果没有则读取 title 和 image
 type IVerticalFeatureRowProps = {
@@ -24,12 +24,12 @@ const VerticalFeatureRow = ({
   reverse,
 }: IVerticalFeatureRowProps) => {
   const verticalFeatureClass = className(
-    'mt-20',
-    'flex',
-    'flex-wrap',
-    'items-center',
+    "mt-20",
+    "flex",
+    "flex-wrap",
+    "items-center",
     {
-      'flex-row-reverse': reverse,
+      "flex-row-reverse": reverse,
     },
   );
 
@@ -65,7 +65,7 @@ const VerticalFeatureRow = ({
               src={`${router.basePath}/assets/screenshots/${pageId}_light.png`}
               alt={`${pages[pageId].title}截图`}
               loading="lazy"
-              className="relative animate-toggle"
+              className="animate-toggle relative"
             />
           </div>
         )}
@@ -81,11 +81,11 @@ const VerticalFeatureRow = ({
               src={`${router.basePath}/assets/screenshots/${image[0]}`}
               alt={`${title}截图`}
               loading="lazy"
-              className="relative animate-toggle"
+              className="animate-toggle relative"
             />
           </div>
         )}
-        {image && typeof image === 'string' && (
+        {image && typeof image === "string" && (
           <img
             src={`${router.basePath}/assets/screenshots/${image}`}
             alt={`${title}截图`}

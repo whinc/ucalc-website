@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Script from 'next/script';
-import { NextSeo } from 'next-seo';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import Script from "next/script";
+import { NextSeo } from "next-seo";
 
-import { AppConfig } from '../utils/AppConfig';
+import { AppConfig } from "../utils/AppConfig";
 
 type IMetaProps = {
   title: string;
