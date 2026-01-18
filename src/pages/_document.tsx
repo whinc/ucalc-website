@@ -10,6 +10,7 @@ class MyDocument extends Document {
       <Html lang={AppConfig.locale}>
         <Head />
         <body>
+          <div id="__next_portal"></div>
           <Main />
           <NextScript />
         </body>
